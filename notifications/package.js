@@ -29,5 +29,5 @@ Package.onUse(function (api) {
 Package.onTest(function (api) {
   api.use('tinytest');
   api.use('meteorinaction:notifications');
-  api.addFiles('notifications-tests.js', 'client');
+  api.addFiles('notifications-tests.js');
 });
