@@ -16,5 +16,11 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-
+  Meteor.methods({
+    getGravatar: function (email) {
+      var gravatar = Meteor.npmRequire('gravatar');
+      var url = gravatar.url(email);
+      return url;
+    }
+  });
 }
