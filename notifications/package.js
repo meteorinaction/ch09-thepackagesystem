@@ -7,7 +7,7 @@ Package.describe({
   git: 'https://github.com/meteorinaction/ch09-thepackagesystem',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
-  documentation: 'notifications/README.md'
+  documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
