@@ -10,12 +10,23 @@ Package.describe({
   documentation: 'README.md'
 });
 
-Package.onUse(function(api) {
+Package.onUse(function (api) {
   api.versionsFrom('1.1.0.2');
-  api.addFiles('notifications.js');
+  api.use([
+      'templating',
+      'ui'
+    ],
+    'client');
+  api.export('Notification', 'client');
+  api.addFiles([
+      'notifications.html',
+      'notifications.js',
+      'notifications.css'
+    ],
+    'client');
 });
 
-Package.onTest(function(api) {
+Package.onTest(function (api) {
   api.use('tinytest');
   api.use('meteorinaction:notifications');
   api.addFiles('notifications-tests.js');
