@@ -1,8 +1,11 @@
-# meteorinaction:notifications
+meteorinaction:notifications
+============================
 
-A sample package for the [Meteor in Action](http://meteorinaction.com) book.
+A sample package for the [Meteor in Action](http://meteorinaction.com)
+book.
 
-## Usage
+Usage
+-----
 
 Include the notificationArea somewhere in your templates:
 
@@ -10,10 +13,10 @@ Include the notificationArea somewhere in your templates:
 
 Use any of the following to display notifications to the user:
 
-* `Notification.setError()`
-* `Notification.setWarning()`
-* `Notification.setSuccess()`
+-   `Notification.setError()`
+-   `Notification.setWarning()`
+-   `Notification.setSuccess()`
 
 Users must acknowledge notifications. You can clear a message using
 
-* `Notification.clear()`
+-   `Notification.clear()`
