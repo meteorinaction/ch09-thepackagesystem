@@ -16,6 +16,7 @@ if (Meteor.isClient) {
           console.log(err);
         } else {
           Session.set('gravatarUrl', res);
+          Notification.setSuccess("I found a gravatar image!");
         }
       });
     }
