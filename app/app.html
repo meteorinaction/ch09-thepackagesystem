@@ -4,6 +4,15 @@
 
 <body>
   <h1>Chapter 9 - The package system</h1>
-
-
+  {{> gravatar}}
 </body>
+
+<template name="gravatar">
+  <h2>Look up gravatar URL</h2>
+  <p>Show the gravatar image for an email address</p>
+  <input id="email" name="email" type="text" />
+  <button>Look up image</button>
+
+  {{#with gravatarUrl}}
+  <img src="{{gravatarUrl}}" alt="Gravatar image for {{email}}" /> {{/with}}
+</template>
