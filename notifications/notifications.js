@@ -1,1 +1,11 @@
-// Write your package code here!
+Template.notificationArea.helpers({
+  notification: function () {
+    return Session.get('notify');
+  }
+});
+
+Template.notificationArea.events({
+  'click button': function () {
+    Session.set('notify', '');
+  }
+});
