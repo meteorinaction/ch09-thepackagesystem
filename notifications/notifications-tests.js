@@ -1,5 +1,6 @@
-// Write your tests here!
-// Here is an example.
-Tinytest.add('example', function (test) {
-  test.equal(true, true);
+Tinytest.add('setError', function (test) {
+  var msgText = 'An error message';
+  Notification.setError(msgText);
+  test.equal(Session.get('notify').text, msgText);
+  test.equal(Session.get('notify').type, 'error');
 });
