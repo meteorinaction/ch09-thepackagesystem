@@ -11,6 +11,13 @@ if (Meteor.isClient) {
     'click button': function (evt, tpl) {
       var email = tpl.find('input#email').value;
       console.log('I\'d like to see the gravatar image for ' + email);
+      Meteor.call('getGravatar', email, function (err, res) {
+        if (err) {
+          console.log(err);
+        } else {
+          Session.set('gravatarUrl', res);
+        }
+      });
     }
   });
 }
